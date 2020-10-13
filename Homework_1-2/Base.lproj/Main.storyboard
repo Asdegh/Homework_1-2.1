@@ -36,33 +36,18 @@
                                     <constraint firstItem="SvY-ng-exX" firstAttribute="centerY" secondItem="U8b-2a-yVK" secondAttribute="centerY" id="rp6-XZ-HI0"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz9-ZK-Pqw">
-                                <rect key="frame" x="115" y="741" width="184" height="41"/>
-                                <color key="backgroundColor" red="0.1059633957" green="0.2337240079" blue="0.60401825259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="startPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L0C-OD-1TM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U8b-2a-yVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="GUm-FU-H1n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U8b-2a-yVK" secondAttribute="trailing" constant="122" id="IxV-5V-Ciw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pz9-ZK-Pqw" secondAttribute="bottom" constant="80" id="LYQ-lS-fe8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U8b-2a-yVK" secondAttribute="bottom" constant="268" id="Pw8-uL-iTM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pz9-ZK-Pqw" secondAttribute="trailing" constant="115" id="TR3-QO-pcg"/>
-                            <constraint firstItem="Pz9-ZK-Pqw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="ZJf-bY-XZo"/>
                             <constraint firstItem="U8b-2a-yVK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oSL-hl-Y21"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="goLight" destination="zSN-Ql-HbW" id="7VM-LF-WRa"/>
-                        <outlet property="startButton" destination="Pz9-ZK-Pqw" id="OFF-HZ-oeI"/>
                         <outlet property="stopLight" destination="nmK-jp-1sU" id="ty7-LS-OML"/>
                         <outlet property="waitLight" destination="SvY-ng-exX" id="WC0-8U-glh"/>
                     </connections>

@@ -19,18 +19,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var goLight: UIView!
     
-    @IBOutlet weak var startButton: UIButton!
+    let startButton = UIButton()
     
     private var trafficLight = TrafficLight.off
     
     private let switchOn: CGFloat = 1
     private let switchOff: CGFloat = 0.3
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         startButton.layer.cornerRadius = 8
+        setupStartButton()
         
         stopLight.layer.cornerRadius = stopLight.bounds.size.width / 2
         waitLight.layer.cornerRadius = stopLight.bounds.size.width / 2
@@ -39,12 +38,29 @@ class ViewController: UIViewController {
         stopLight.alpha = switchOff
         waitLight.alpha = switchOff
         goLight.alpha = switchOff
-        
     }
-
-    @IBAction func startPushed(_ sender: Any) {
-        startButton.setTitle("Next", for: .normal)
+    // Button settings
+    func setupStartButton() {
+        startButton.backgroundColor = .blue
+        startButton.setTitleColor(.white, for: .normal)
+        startButton.setTitle("Start", for: .normal)
+        startButton.layer.cornerRadius = 8
         
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(startButton)
+        setStartButtonConstraints()
+    }
+    // Button's constraints settings
+    func setStartButtonConstraints() {
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 115).isActive = true
+        startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -115).isActive = true
+        startButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80).isActive = true
+    }
+    
+    @objc func startButtonTapped() {
+        startButton.setTitle("Next", for: .normal)
         
         
         switch trafficLight {
