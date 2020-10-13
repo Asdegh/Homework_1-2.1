@@ -15,21 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmK-jp-1sU">
-                                <rect key="frame" x="122" y="44" width="170" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.18312026764881029" blue="0.14259097852840585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SvY-ng-exX">
-                                <rect key="frame" x="122" y="234" width="170" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84542598109267564" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-Ql-HbW">
-                                <rect key="frame" x="122" y="424" width="170" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.79191628886010368" blue="0.096401926905446411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U8b-2a-yVK">
+                                <rect key="frame" x="122" y="44" width="170" height="550"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmK-jp-1sU">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                        <color key="backgroundColor" red="1" green="0.18312026764881029" blue="0.14259097852840585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvY-ng-exX">
+                                        <rect key="frame" x="0.0" y="190" width="170" height="170"/>
+                                        <color key="backgroundColor" red="0.84542598109267564" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-Ql-HbW">
+                                        <rect key="frame" x="0.0" y="380" width="170" height="170"/>
+                                        <color key="backgroundColor" red="0.0" green="0.79191628886010368" blue="0.096401926905446411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SvY-ng-exX" firstAttribute="top" secondItem="U8b-2a-yVK" secondAttribute="top" constant="190" id="Cmh-uM-31S"/>
+                                    <constraint firstItem="SvY-ng-exX" firstAttribute="centerY" secondItem="U8b-2a-yVK" secondAttribute="centerY" id="rp6-XZ-HI0"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz9-ZK-Pqw">
                                 <rect key="frame" x="115" y="741" width="184" height="41"/>
                                 <color key="backgroundColor" red="0.1059633957" green="0.2337240079" blue="0.60401825259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,9 +51,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="U8b-2a-yVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="GUm-FU-H1n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U8b-2a-yVK" secondAttribute="trailing" constant="122" id="IxV-5V-Ciw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pz9-ZK-Pqw" secondAttribute="bottom" constant="80" id="LYQ-lS-fe8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U8b-2a-yVK" secondAttribute="bottom" constant="268" id="Pw8-uL-iTM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pz9-ZK-Pqw" secondAttribute="trailing" constant="115" id="TR3-QO-pcg"/>
                             <constraint firstItem="Pz9-ZK-Pqw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="ZJf-bY-XZo"/>
+                            <constraint firstItem="U8b-2a-yVK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oSL-hl-Y21"/>
                         </constraints>
                     </view>
                     <connections>
